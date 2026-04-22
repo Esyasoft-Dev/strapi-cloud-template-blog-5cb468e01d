@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_sections_cta_banners",
+  "info": {
+    "displayName": "CTA Banner",
+    "icon": "megaphone"
+  },
+  "options": {},
+  "attributes": {
+    "largeText": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "text"
+    },
+    "showDownloadForm": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "pdfDocument": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

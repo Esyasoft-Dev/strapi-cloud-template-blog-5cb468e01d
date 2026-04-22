@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "monitor"
+  },
+  "options": {},
+  "attributes": {
+    "heroType": {
+      "type": "enumeration",
+      "enum": [
+        "classic",
+        "sticky",
+        "overlay"
+      ],
+      "default": "classic",
+      "required": true
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "ctaLinkRef": {
+      "type": "json"
+    },
+    "ctaLabel": {
+      "type": "string"
+    }
+  }
+}

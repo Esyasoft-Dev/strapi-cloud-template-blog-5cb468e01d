@@ -1,0 +1,153 @@
+{
+  "collectionName": "components_sections_numbers_tiles",
+  "info": {
+    "displayName": "Numbers Tiles",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "numbersSectionTitle": {
+      "type": "string"
+    },
+    "numbersSectionNumbers": {
+      "type": "json"
+    },
+    "hideTilesSection": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "tilesSectionTitle": {
+      "type": "string"
+    },
+    "tilesSectionBackground": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "tile1Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tile1Title": {
+      "type": "string"
+    },
+    "tile1Text": {
+      "type": "richtext"
+    },
+    "tile1CtaLabel": {
+      "type": "string"
+    },
+    "tile1CtaRef": {
+      "type": "json"
+    },
+    "tile2Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tile2Title": {
+      "type": "string"
+    },
+    "tile2Text": {
+      "type": "richtext"
+    },
+    "tile2CtaLabel": {
+      "type": "string"
+    },
+    "tile2CtaRef": {
+      "type": "json"
+    },
+    "tile3Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tile3Title": {
+      "type": "string"
+    },
+    "tile3Text": {
+      "type": "richtext"
+    },
+    "tile3CtaLabel": {
+      "type": "string"
+    },
+    "tile3CtaRef": {
+      "type": "json"
+    },
+    "tile4Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tile4Title": {
+      "type": "string"
+    },
+    "tile4Text": {
+      "type": "richtext"
+    },
+    "tile4CtaLabel": {
+      "type": "string"
+    },
+    "tile4CtaRef": {
+      "type": "json"
+    },
+    "tile5Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tile5Title": {
+      "type": "string"
+    },
+    "tile5Text": {
+      "type": "richtext"
+    },
+    "tile5CtaLabel": {
+      "type": "string"
+    },
+    "tile5CtaRef": {
+      "type": "json"
+    },
+    "tile6Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tile6Title": {
+      "type": "string"
+    },
+    "tile6Text": {
+      "type": "richtext"
+    },
+    "tile6CtaLabel": {
+      "type": "string"
+    },
+    "tile6CtaRef": {
+      "type": "json"
+    }
+  }
+}

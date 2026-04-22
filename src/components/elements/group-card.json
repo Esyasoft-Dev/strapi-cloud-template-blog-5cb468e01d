@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_group_cards",
+  "info": {
+    "displayName": "Group Card",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "cf_items": {
+      "type": "json"
+    }
+  }
+}

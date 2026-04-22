@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_sections_animated_logos",
+  "info": {
+    "displayName": "Animated Logos",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logosRow1": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logosRow2": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logoColor": {
+      "type": "enumeration",
+      "enum": [
+        "greyscale",
+        "color"
+      ],
+      "default": "greyscale"
+    },
+    "noPadding": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

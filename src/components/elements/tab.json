@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_tabs",
+  "info": {
+    "displayName": "Tab",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "hideTabs": {
+      "type": "json"
+    },
+    "tagsRef": {
+      "type": "json"
+    }
+  }
+}

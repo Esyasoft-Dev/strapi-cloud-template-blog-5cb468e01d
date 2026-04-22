@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_sections_cta_sections",
+  "info": {
+    "displayName": "CTA Section",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "ctaLinkRef": {
+      "type": "json"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "locationsRef": {
+      "type": "json"
+    },
+    "hideOverlay": {
+      "type": "boolean",
+      "default": false
+    },
+    "darkText": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

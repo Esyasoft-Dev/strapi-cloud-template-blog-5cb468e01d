@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_tabbed_contents",
+  "info": {
+    "displayName": "Tabbed Content",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "internalName": {
+      "type": "string"
+    },
+    "contentSectionsRef": {
+      "type": "json"
+    }
+  }
+}

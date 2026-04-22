@@ -1,0 +1,94 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_configs",
+  "info": {
+    "singularName": "global-config",
+    "pluralName": "global-configs",
+    "displayName": "Global Config"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "internalName": {
+      "type": "string"
+    },
+    "headerMenu": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::menu-item.menu-item"
+    },
+    "footerMenuColumn1Label": {
+      "type": "string"
+    },
+    "footerMenuColumn1Links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    },
+    "footerMenuColumn2Label": {
+      "type": "string"
+    },
+    "footerMenuColumn2Links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    },
+    "footerMenuColumn3Label": {
+      "type": "string"
+    },
+    "footerMenuColumn3Links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    },
+    "footerMenuColumn4Label": {
+      "type": "string"
+    },
+    "footerMenuColumn4Links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    },
+    "footerSocialMediaLabel": {
+      "type": "string"
+    },
+    "footerSocialMediaIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "footerSocialMediaLink": {
+      "type": "string"
+    },
+    "footerSecondaryMenu": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    },
+    "footerCopyright": {
+      "type": "string"
+    },
+    "suggestedLanguages": {
+      "type": "json"
+    },
+    "suggestedSkills": {
+      "type": "json"
+    },
+    "departmentOptions": {
+      "type": "json"
+    },
+    "headerPrefix": {
+      "type": "json"
+    },
+    "social_handles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social-handle.social-handle"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "group_cards",
+  "info": {
+    "singularName": "group-card",
+    "pluralName": "group-cards",
+    "displayName": "Group Card"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::card.card"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "cf_type": {
+      "type": "enumeration",
+      "enum": [
+        "product-tag",
+        "news-category",
+        "blog-category",
+        "case-study-category",
+        "news-tag",
+        "case-study-tag",
+        "blog-tag"
+      ],
+      "required": true
+    }
+  }
+}

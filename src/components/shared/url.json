@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_urls",
+  "info": {
+    "displayName": "URL",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "ctaLink": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_sections_title_text_ctas",
+  "info": {
+    "displayName": "Title Text CTA",
+    "icon": "file-alt"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "sideTitle": {
+      "type": "string"
+    },
+    "limitSideTitleWidth": {
+      "type": "boolean",
+      "default": false
+    },
+    "sideTextSize": {
+      "type": "enumeration",
+      "enum": [
+        "Default",
+        "Smaller"
+      ],
+      "default": "Default"
+    },
+    "sideText": {
+      "type": "string"
+    },
+    "mainText": {
+      "type": "richtext"
+    },
+    "mainTextColumns": {
+      "type": "enumeration",
+      "enum": [
+        "One",
+        "Two"
+      ],
+      "default": "One"
+    },
+    "mainTextSize": {
+      "type": "enumeration",
+      "enum": [
+        "Small",
+        "Big"
+      ],
+      "default": "Small"
+    },
+    "ctaLinkRef": {
+      "type": "json"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "hasBackground": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

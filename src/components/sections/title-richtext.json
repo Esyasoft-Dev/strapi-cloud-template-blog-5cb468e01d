@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_title_richtexts",
+  "info": {
+    "displayName": "Title RichText",
+    "icon": "pen"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "iconIdentifier": {
+      "type": "string"
+    }
+  }
+}

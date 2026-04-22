@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero",
+        "sections.animated-logos",
+        "sections.gallery",
+        "sections.cta-banner",
+        "sections.cta-section",
+        "sections.title-text-cta",
+        "sections.title-richtext",
+        "sections.title-repeater",
+        "sections.form-section",
+        "sections.cards",
+        "sections.tabbed-content",
+        "sections.media-tabs",
+        "sections.numbers-tiles",
+        "elements.tab"
+      ]
+    },
+    "headerBackgroundType": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "transparent"
+      ],
+      "default": "white",
+      "required": true
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "string"
+    },
+    "seoImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "seoKeywords": {
+      "type": "json"
+    },
+    "preventIndexing": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

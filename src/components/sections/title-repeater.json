@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_title_repeaters",
+  "info": {
+    "displayName": "Title Repeater",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "repeater": {
+      "type": "json"
+    },
+    "identifier": {
+      "type": "string"
+    }
+  }
+}

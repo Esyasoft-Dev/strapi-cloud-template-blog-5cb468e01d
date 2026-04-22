@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_form_sections",
+  "info": {
+    "displayName": "Form Section",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {
+    "formType": {
+      "type": "enumeration",
+      "enum": [
+        "job-application-form",
+        "contact-form"
+      ],
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
