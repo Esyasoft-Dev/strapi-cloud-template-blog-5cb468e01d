@@ -550,6 +550,7 @@ export interface ApiCardCard extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     ctaLabel: Schema.Attribute.String;
     ctaLinkData: Schema.Attribute.JSON;
+    ctaUrl: Schema.Attribute.String;
     ctaWillOpenModal: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     image: Schema.Attribute.Media<'images'>;

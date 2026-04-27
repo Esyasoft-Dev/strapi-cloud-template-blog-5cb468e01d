@@ -26,6 +26,9 @@
     "ctaLabel": {
       "type": "string"
     },
+    "ctaUrl": {
+      "type": "string"
+    },
     "ctaWillOpenModal": {
       "type": "boolean",
       "default": false
