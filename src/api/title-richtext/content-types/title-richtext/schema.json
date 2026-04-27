@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "title_richtexts",
+  "info": {
+    "singularName": "title-richtext",
+    "pluralName": "title-richtexts",
+    "displayName": "Title Richtext"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "iconIdentifier": {
+      "type": "string"
+    }
+  }
+}

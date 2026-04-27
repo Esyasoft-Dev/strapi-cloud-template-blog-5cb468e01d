@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "title_and_repeaters",
+  "info": {
+    "singularName": "title-and-repeater",
+    "pluralName": "title-and-repeaters",
+    "displayName": "Title And Repeater"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "repeater": {
+      "type": "json"
+    },
+    "identifier": {
+      "type": "string"
+    }
+  }
+}

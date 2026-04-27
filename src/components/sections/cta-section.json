@@ -9,7 +9,7 @@
     "background": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
@@ -24,11 +24,19 @@
     "ctaLinkRef": {
       "type": "json"
     },
+    "ctaUrl": {
+      "type": "string"
+    },
     "ctaLabel": {
       "type": "string"
     },
     "locationsRef": {
       "type": "json"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::title-and-repeater.title-and-repeater"
     },
     "hideOverlay": {
       "type": "boolean",

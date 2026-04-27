@@ -11,6 +11,11 @@
     },
     "contentSectionsRef": {
       "type": "json"
+    },
+    "contentSections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::title-richtext.title-richtext"
     }
   }
 }

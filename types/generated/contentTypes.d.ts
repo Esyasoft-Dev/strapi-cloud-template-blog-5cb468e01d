@@ -981,6 +981,68 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTitleAndRepeaterTitleAndRepeater
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'title_and_repeaters';
+  info: {
+    displayName: 'Title And Repeater';
+    pluralName: 'title-and-repeaters';
+    singularName: 'title-and-repeater';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    identifier: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::title-and-repeater.title-and-repeater'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    repeater: Schema.Attribute.JSON;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTitleRichtextTitleRichtext
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'title_richtexts';
+  info: {
+    displayName: 'Title Richtext';
+    pluralName: 'title-richtexts';
+    singularName: 'title-richtext';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    iconIdentifier: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::title-richtext.title-richtext'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1505,6 +1567,8 @@ declare module '@strapi/strapi' {
       'api::product.product': ApiProductProduct;
       'api::social-handle.social-handle': ApiSocialHandleSocialHandle;
       'api::tag.tag': ApiTagTag;
+      'api::title-and-repeater.title-and-repeater': ApiTitleAndRepeaterTitleAndRepeater;
+      'api::title-richtext.title-richtext': ApiTitleRichtextTitleRichtext;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

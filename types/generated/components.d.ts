@@ -46,6 +46,7 @@ export interface ElementsTab extends Struct.ComponentSchema {
   };
   attributes: {
     hideTabs: Schema.Attribute.JSON;
+    tags: Schema.Attribute.Relation<'oneToOne', 'api::tag.tag'>;
     tagsRef: Schema.Attribute.JSON;
     text: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -131,12 +132,16 @@ export interface SectionsCtaSection extends Struct.ComponentSchema {
     icon: 'cursor';
   };
   attributes: {
-    background: Schema.Attribute.Media<'images' | 'videos'> &
-      Schema.Attribute.Required;
+    background: Schema.Attribute.Media<'images' | 'videos'>;
     ctaLabel: Schema.Attribute.String;
     ctaLinkRef: Schema.Attribute.JSON;
+    ctaUrl: Schema.Attribute.String;
     darkText: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     hideOverlay: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::title-and-repeater.title-and-repeater'
+    >;
     locationsRef: Schema.Attribute.JSON;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -206,6 +211,10 @@ export interface SectionsMediaTabs extends Struct.ComponentSchema {
     hideTabs: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<true>;
+    tabs: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::title-richtext.title-richtext'
+    >;
     tabsRef: Schema.Attribute.JSON;
     title: Schema.Attribute.String;
   };
@@ -265,6 +274,10 @@ export interface SectionsTabbedContent extends Struct.ComponentSchema {
     icon: 'layer';
   };
   attributes: {
+    contentSections: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::title-richtext.title-richtext'
+    >;
     contentSectionsRef: Schema.Attribute.JSON;
     internalName: Schema.Attribute.String;
   };

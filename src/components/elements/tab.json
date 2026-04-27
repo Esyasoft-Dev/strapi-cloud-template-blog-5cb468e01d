@@ -17,6 +17,11 @@
     },
     "tagsRef": {
       "type": "json"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag.tag"
     }
   }
 }
