@@ -14,6 +14,7 @@
     },
     "cardType": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "feature-cards",
         "large-cta-cards",
@@ -25,11 +26,7 @@
         "grouped-timeline",
         "company-cards",
         "contact-cards"
-      ],
-      "required": true
-    },
-    "cardsRef": {
-      "type": "json"
+      ]
     },
     "cardItems": {
       "type": "relation",
@@ -47,8 +44,8 @@
     },
     "disableModal": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     }
   }
 }
