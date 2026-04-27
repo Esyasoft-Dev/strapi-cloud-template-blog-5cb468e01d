@@ -943,6 +943,37 @@ export interface ApiSocialHandleSocialHandle
   };
 }
 
+export interface ApiTabEntryTabEntry extends Struct.CollectionTypeSchema {
+  collectionName: 'tab_entries';
+  info: {
+    displayName: 'Tab Entry';
+    pluralName: 'tab-entries';
+    singularName: 'tab-entry';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hideTabs: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tab-entry.tab-entry'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tags: Schema.Attribute.Relation<'oneToOne', 'api::tag.tag'>;
+    text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Struct.CollectionTypeSchema {
   collectionName: 'tags';
   info: {
@@ -1566,6 +1597,7 @@ declare module '@strapi/strapi' {
       'api::post.post': ApiPostPost;
       'api::product.product': ApiProductProduct;
       'api::social-handle.social-handle': ApiSocialHandleSocialHandle;
+      'api::tab-entry.tab-entry': ApiTabEntryTabEntry;
       'api::tag.tag': ApiTagTag;
       'api::title-and-repeater.title-and-repeater': ApiTitleAndRepeaterTitleAndRepeater;
       'api::title-richtext.title-richtext': ApiTitleRichtextTitleRichtext;

@@ -1,35 +1,12 @@
 {
   "collectionName": "components_sections_media_tabs",
-  "info": {
-    "displayName": "Media Tabs",
-    "icon": "play"
-  },
+  "info": { "displayName": "Media Tabs", "icon": "play" },
   "options": {},
   "attributes": {
-    "background": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ]
-    },
-    "title": {
-      "type": "string"
-    },
-    "hideTabs": {
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
-    "tabsRef": {
-      "type": "json"
-    },
-    "tabs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::title-richtext.title-richtext"
-    }
+    "background": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images", "videos"] },
+    "title": { "type": "string" },
+    "hideTabs": { "type": "boolean", "default": true, "required": true },
+    "tabsRef": { "type": "json" },
+    "tabs": { "type": "relation", "relation": "oneToMany", "target": "api::tab-entry.tab-entry" }
   }
 }

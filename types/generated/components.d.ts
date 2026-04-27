@@ -211,10 +211,7 @@ export interface SectionsMediaTabs extends Struct.ComponentSchema {
     hideTabs: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<true>;
-    tabs: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::title-richtext.title-richtext'
-    >;
+    tabs: Schema.Attribute.Relation<'oneToMany', 'api::tab-entry.tab-entry'>;
     tabsRef: Schema.Attribute.JSON;
     title: Schema.Attribute.String;
   };

@@ -1,0 +1,12 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tab_entries",
+  "info": { "singularName": "tab-entry", "pluralName": "tab-entries", "displayName": "Tab Entry" },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "title": { "type": "string" },
+    "text": { "type": "string" },
+    "hideTabs": { "type": "json" },
+    "tags": { "type": "relation", "relation": "oneToOne", "target": "api::tag.tag" }
+  }
+}
