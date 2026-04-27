@@ -89,6 +89,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::social-handle.social-handle"
+    },
+    "websiteGroup": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::card.card"
     }
   }
 }

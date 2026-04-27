@@ -667,6 +667,7 @@ export interface ApiGlobalConfigGlobalConfig extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    websiteGroup: Schema.Attribute.Relation<'oneToMany', 'api::card.card'>;
   };
 }
 
