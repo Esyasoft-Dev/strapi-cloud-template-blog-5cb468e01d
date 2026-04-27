@@ -1,21 +1,9 @@
 {
   "collectionName": "components_sections_tabbed_contents",
-  "info": {
-    "displayName": "Tabbed Content",
-    "icon": "layer"
-  },
+  "info": { "displayName": "Tabbed Content", "icon": "layer" },
   "options": {},
   "attributes": {
-    "internalName": {
-      "type": "string"
-    },
-    "contentSectionsRef": {
-      "type": "json"
-    },
-    "contentSections": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::title-richtext.title-richtext"
-    }
+    "internalName": { "type": "string" },
+    "contentSections": { "type": "relation", "relation": "oneToMany", "target": "api::title-richtext.title-richtext" }
   }
 }

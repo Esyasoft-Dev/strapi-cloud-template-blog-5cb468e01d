@@ -6,7 +6,6 @@
     "background": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images", "videos"] },
     "title": { "type": "string" },
     "hideTabs": { "type": "boolean", "default": true, "required": true },
-    "tabsRef": { "type": "json" },
     "tabs": { "type": "relation", "relation": "oneToMany", "target": "api::title-richtext.title-richtext" }
   }
 }

@@ -1,50 +1,15 @@
 {
   "collectionName": "components_sections_cta_sections",
-  "info": {
-    "displayName": "CTA Section",
-    "icon": "cursor"
-  },
+  "info": { "displayName": "CTA Section", "icon": "cursor" },
   "options": {},
   "attributes": {
-    "background": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ]
-    },
-    "title": {
-      "type": "string"
-    },
-    "text": {
-      "type": "text"
-    },
-    "ctaLinkRef": {
-      "type": "json"
-    },
-    "ctaUrl": {
-      "type": "string"
-    },
-    "ctaLabel": {
-      "type": "string"
-    },
-    "locationsRef": {
-      "type": "json"
-    },
-    "locations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::title-and-repeater.title-and-repeater"
-    },
-    "hideOverlay": {
-      "type": "boolean",
-      "default": false
-    },
-    "darkText": {
-      "type": "boolean",
-      "default": false
-    }
+    "background": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images", "videos"] },
+    "title": { "type": "string" },
+    "text": { "type": "text" },
+    "ctaUrl": { "type": "string" },
+    "ctaLabel": { "type": "string" },
+    "locations": { "type": "relation", "relation": "oneToMany", "target": "api::title-and-repeater.title-and-repeater" },
+    "hideOverlay": { "type": "boolean", "default": false },
+    "darkText": { "type": "boolean", "default": false }
   }
 }

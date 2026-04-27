@@ -1,51 +1,14 @@
 {
-  "collectionName": "components_sections_cards_sections",
-  "info": {
-    "displayName": "Cards Section",
-    "icon": "apps"
-  },
+  "collectionName": "components_sections_cards",
+  "info": { "displayName": "Cards", "icon": "layout" },
   "options": {},
   "attributes": {
-    "internalName": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
-    "cardType": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "feature-cards",
-        "large-cta-cards",
-        "small-cta-cards",
-        "full-width-cards",
-        "platform-cards",
-        "team-member-cards",
-        "scrollable-cards",
-        "grouped-timeline",
-        "company-cards",
-        "contact-cards"
-      ]
-    },
-    "cardItems": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::card.card"
-    },
-    "groupCardItems": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::group-card.group-card"
-    },
-    "noOverlay": {
-      "type": "boolean",
-      "default": false
-    },
-    "disableModal": {
-      "type": "boolean",
-      "required": true,
-      "default": false
-    }
+    "internalName": { "type": "string" },
+    "title": { "type": "string" },
+    "cardType": { "type": "string" },
+    "noOverlay": { "type": "boolean", "default": false },
+    "disableModal": { "type": "boolean", "default": false },
+    "cardItems": { "type": "relation", "relation": "oneToMany", "target": "api::card.card" },
+    "groupCardItems": { "type": "relation", "relation": "oneToMany", "target": "api::group-card.group-card" }
   }
 }

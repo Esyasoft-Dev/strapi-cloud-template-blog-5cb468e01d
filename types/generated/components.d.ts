@@ -47,7 +47,6 @@ export interface ElementsTab extends Struct.ComponentSchema {
   attributes: {
     hideTabs: Schema.Attribute.JSON;
     tags: Schema.Attribute.Relation<'oneToOne', 'api::tag.tag'>;
-    tagsRef: Schema.Attribute.JSON;
     text: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -72,31 +71,15 @@ export interface SectionsAnimatedLogos extends Struct.ComponentSchema {
 }
 
 export interface SectionsCards extends Struct.ComponentSchema {
-  collectionName: 'components_sections_cards_sections';
+  collectionName: 'components_sections_cards';
   info: {
-    displayName: 'Cards Section';
-    icon: 'apps';
+    displayName: 'Cards';
+    icon: 'layout';
   };
   attributes: {
     cardItems: Schema.Attribute.Relation<'oneToMany', 'api::card.card'>;
-    cardType: Schema.Attribute.Enumeration<
-      [
-        'feature-cards',
-        'large-cta-cards',
-        'small-cta-cards',
-        'full-width-cards',
-        'platform-cards',
-        'team-member-cards',
-        'scrollable-cards',
-        'grouped-timeline',
-        'company-cards',
-        'contact-cards',
-      ]
-    > &
-      Schema.Attribute.Required;
-    disableModal: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
+    cardType: Schema.Attribute.String;
+    disableModal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     groupCardItems: Schema.Attribute.Relation<
       'oneToMany',
       'api::group-card.group-card'
@@ -111,15 +94,15 @@ export interface SectionsCtaBanner extends Struct.ComponentSchema {
   collectionName: 'components_sections_cta_banners';
   info: {
     displayName: 'CTA Banner';
-    icon: 'megaphone';
+    icon: 'layout';
   };
   attributes: {
     buttonLabel: Schema.Attribute.String;
+    ctaUrl: Schema.Attribute.String;
     largeText: Schema.Attribute.String;
     logo: Schema.Attribute.Media<'images'>;
     pdfDocument: Schema.Attribute.Media<'files'>;
     showDownloadForm: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.Text;
   };
@@ -134,7 +117,6 @@ export interface SectionsCtaSection extends Struct.ComponentSchema {
   attributes: {
     background: Schema.Attribute.Media<'images' | 'videos'>;
     ctaLabel: Schema.Attribute.String;
-    ctaLinkRef: Schema.Attribute.JSON;
     ctaUrl: Schema.Attribute.String;
     darkText: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     hideOverlay: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -142,7 +124,6 @@ export interface SectionsCtaSection extends Struct.ComponentSchema {
       'oneToMany',
       'api::title-and-repeater.title-and-repeater'
     >;
-    locationsRef: Schema.Attribute.JSON;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -184,18 +165,15 @@ export interface SectionsHero extends Struct.ComponentSchema {
   collectionName: 'components_sections_heroes';
   info: {
     displayName: 'Hero';
-    icon: 'monitor';
+    icon: 'dashboard';
   };
   attributes: {
-    background: Schema.Attribute.Media<'images' | 'videos'> &
-      Schema.Attribute.Required;
+    background: Schema.Attribute.Media<'images' | 'videos'>;
     ctaLabel: Schema.Attribute.String;
-    ctaLinkRef: Schema.Attribute.JSON;
-    heroType: Schema.Attribute.Enumeration<['classic', 'sticky', 'overlay']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'classic'>;
+    ctaUrl: Schema.Attribute.String;
+    heroType: Schema.Attribute.String;
     text: Schema.Attribute.RichText;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
     video: Schema.Attribute.Media<'videos'>;
   };
 }
@@ -215,7 +193,6 @@ export interface SectionsMediaTabs extends Struct.ComponentSchema {
       'oneToMany',
       'api::title-richtext.title-richtext'
     >;
-    tabsRef: Schema.Attribute.JSON;
     title: Schema.Attribute.String;
   };
 }
@@ -278,7 +255,6 @@ export interface SectionsTabbedContent extends Struct.ComponentSchema {
       'oneToMany',
       'api::title-richtext.title-richtext'
     >;
-    contentSectionsRef: Schema.Attribute.JSON;
     internalName: Schema.Attribute.String;
   };
 }
@@ -313,23 +289,20 @@ export interface SectionsTitleTextCta extends Struct.ComponentSchema {
   collectionName: 'components_sections_title_text_ctas';
   info: {
     displayName: 'Title Text CTA';
-    icon: 'file-alt';
+    icon: 'cursor';
   };
   attributes: {
     ctaLabel: Schema.Attribute.String;
-    ctaLinkRef: Schema.Attribute.JSON;
+    ctaUrl: Schema.Attribute.String;
     hasBackground: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     limitSideTitleWidth: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     mainText: Schema.Attribute.RichText;
-    mainTextColumns: Schema.Attribute.Enumeration<['One', 'Two']> &
-      Schema.Attribute.DefaultTo<'One'>;
-    mainTextSize: Schema.Attribute.Enumeration<['Small', 'Big']> &
-      Schema.Attribute.DefaultTo<'Small'>;
+    mainTextColumns: Schema.Attribute.String;
+    mainTextSize: Schema.Attribute.String;
     mainTitle: Schema.Attribute.String;
     sideText: Schema.Attribute.String;
-    sideTextSize: Schema.Attribute.Enumeration<['Default', 'Smaller']> &
-      Schema.Attribute.DefaultTo<'Default'>;
+    sideTextSize: Schema.Attribute.String;
     sideTitle: Schema.Attribute.String;
   };
 }
