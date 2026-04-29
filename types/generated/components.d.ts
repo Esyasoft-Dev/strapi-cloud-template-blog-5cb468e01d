@@ -98,7 +98,7 @@ export interface SectionsCtaBanner extends Struct.ComponentSchema {
   };
   attributes: {
     buttonLabel: Schema.Attribute.String;
-    ctaUrl: Schema.Attribute.String;
+    ctaLink: Schema.Attribute.String;
     largeText: Schema.Attribute.String;
     logo: Schema.Attribute.Media<'images'>;
     pdfDocument: Schema.Attribute.Media<'files'>;
@@ -117,7 +117,7 @@ export interface SectionsCtaSection extends Struct.ComponentSchema {
   attributes: {
     background: Schema.Attribute.Media<'images' | 'videos'>;
     ctaLabel: Schema.Attribute.String;
-    ctaUrl: Schema.Attribute.String;
+    ctaLink: Schema.Attribute.String;
     darkText: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     hideOverlay: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locations: Schema.Attribute.Relation<
@@ -170,7 +170,7 @@ export interface SectionsHero extends Struct.ComponentSchema {
   attributes: {
     background: Schema.Attribute.Media<'images' | 'videos'>;
     ctaLabel: Schema.Attribute.String;
-    ctaUrl: Schema.Attribute.String;
+    ctaLink: Schema.Attribute.String;
     heroType: Schema.Attribute.String;
     text: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
@@ -210,32 +210,32 @@ export interface SectionsNumbersTiles extends Struct.ComponentSchema {
     numbersSectionNumbers: Schema.Attribute.JSON;
     numbersSectionTitle: Schema.Attribute.String;
     tile1CtaLabel: Schema.Attribute.String;
-    tile1CtaUrl: Schema.Attribute.String;
+    tile1CtaLink: Schema.Attribute.String;
     tile1Image: Schema.Attribute.Media<'images'>;
     tile1Text: Schema.Attribute.RichText;
     tile1Title: Schema.Attribute.String;
     tile2CtaLabel: Schema.Attribute.String;
-    tile2CtaUrl: Schema.Attribute.String;
+    tile2CtaLink: Schema.Attribute.String;
     tile2Image: Schema.Attribute.Media<'images'>;
     tile2Text: Schema.Attribute.RichText;
     tile2Title: Schema.Attribute.String;
     tile3CtaLabel: Schema.Attribute.String;
-    tile3CtaUrl: Schema.Attribute.String;
+    tile3CtaLink: Schema.Attribute.String;
     tile3Image: Schema.Attribute.Media<'images'>;
     tile3Text: Schema.Attribute.RichText;
     tile3Title: Schema.Attribute.String;
     tile4CtaLabel: Schema.Attribute.String;
-    tile4CtaUrl: Schema.Attribute.String;
+    tile4CtaLink: Schema.Attribute.String;
     tile4Image: Schema.Attribute.Media<'images'>;
     tile4Text: Schema.Attribute.RichText;
     tile4Title: Schema.Attribute.String;
     tile5CtaLabel: Schema.Attribute.String;
-    tile5CtaUrl: Schema.Attribute.String;
+    tile5CtaLink: Schema.Attribute.String;
     tile5Image: Schema.Attribute.Media<'images'>;
     tile5Text: Schema.Attribute.RichText;
     tile5Title: Schema.Attribute.String;
     tile6CtaLabel: Schema.Attribute.String;
-    tile6CtaUrl: Schema.Attribute.String;
+    tile6CtaLink: Schema.Attribute.String;
     tile6Image: Schema.Attribute.Media<'images'>;
     tile6Text: Schema.Attribute.RichText;
     tile6Title: Schema.Attribute.String;
@@ -293,7 +293,7 @@ export interface SectionsTitleTextCta extends Struct.ComponentSchema {
   };
   attributes: {
     ctaLabel: Schema.Attribute.String;
-    ctaUrl: Schema.Attribute.String;
+    ctaLink: Schema.Attribute.String;
     hasBackground: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     limitSideTitleWidth: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;

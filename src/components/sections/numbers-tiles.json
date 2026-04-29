@@ -46,9 +46,6 @@
     "tile1CtaLabel": {
       "type": "string"
     },
-    "tile1CtaUrl": {
-      "type": "string"
-    },
     "tile2Image": {
       "type": "media",
       "multiple": false,
@@ -64,9 +61,6 @@
       "type": "richtext"
     },
     "tile2CtaLabel": {
-      "type": "string"
-    },
-    "tile2CtaUrl": {
       "type": "string"
     },
     "tile3Image": {
@@ -86,9 +80,6 @@
     "tile3CtaLabel": {
       "type": "string"
     },
-    "tile3CtaUrl": {
-      "type": "string"
-    },
     "tile4Image": {
       "type": "media",
       "multiple": false,
@@ -104,9 +95,6 @@
       "type": "richtext"
     },
     "tile4CtaLabel": {
-      "type": "string"
-    },
-    "tile4CtaUrl": {
       "type": "string"
     },
     "tile5Image": {
@@ -126,9 +114,6 @@
     "tile5CtaLabel": {
       "type": "string"
     },
-    "tile5CtaUrl": {
-      "type": "string"
-    },
     "tile6Image": {
       "type": "media",
       "multiple": false,
@@ -146,7 +131,22 @@
     "tile6CtaLabel": {
       "type": "string"
     },
-    "tile6CtaUrl": {
+    "tile1CtaLink": {
+      "type": "string"
+    },
+    "tile2CtaLink": {
+      "type": "string"
+    },
+    "tile3CtaLink": {
+      "type": "string"
+    },
+    "tile4CtaLink": {
+      "type": "string"
+    },
+    "tile5CtaLink": {
+      "type": "string"
+    },
+    "tile6CtaLink": {
       "type": "string"
     }
   }

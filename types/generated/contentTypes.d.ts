@@ -549,8 +549,8 @@ export interface ApiCardCard extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ctaLabel: Schema.Attribute.String;
+    ctaLink: Schema.Attribute.String;
     ctaLinkData: Schema.Attribute.JSON;
-    ctaUrl: Schema.Attribute.String;
     ctaWillOpenModal: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     image: Schema.Attribute.Media<'images'>;

@@ -1,14 +1,42 @@
 {
   "collectionName": "components_sections_cta_banners",
-  "info": { "displayName": "CTA Banner", "icon": "layout" },
+  "info": {
+    "displayName": "CTA Banner",
+    "icon": "layout"
+  },
   "options": {},
   "attributes": {
-    "largeText": { "type": "string" },
-    "logo": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
-    "text": { "type": "text" },
-    "showDownloadForm": { "type": "boolean", "default": false },
-    "buttonLabel": { "type": "string" },
-    "ctaUrl": { "type": "string" },
-    "pdfDocument": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["files"] }
+    "largeText": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "text"
+    },
+    "showDownloadForm": {
+      "type": "boolean",
+      "default": false
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "pdfDocument": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "ctaLink": {
+      "type": "string"
+    }
   }
 }
