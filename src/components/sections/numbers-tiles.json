@@ -46,8 +46,8 @@
     "tile1CtaLabel": {
       "type": "string"
     },
-    "tile1CtaRef": {
-      "type": "json"
+    "tile1CtaUrl": {
+      "type": "string"
     },
     "tile2Image": {
       "type": "media",
@@ -66,8 +66,8 @@
     "tile2CtaLabel": {
       "type": "string"
     },
-    "tile2CtaRef": {
-      "type": "json"
+    "tile2CtaUrl": {
+      "type": "string"
     },
     "tile3Image": {
       "type": "media",
@@ -86,8 +86,8 @@
     "tile3CtaLabel": {
       "type": "string"
     },
-    "tile3CtaRef": {
-      "type": "json"
+    "tile3CtaUrl": {
+      "type": "string"
     },
     "tile4Image": {
       "type": "media",
@@ -106,8 +106,8 @@
     "tile4CtaLabel": {
       "type": "string"
     },
-    "tile4CtaRef": {
-      "type": "json"
+    "tile4CtaUrl": {
+      "type": "string"
     },
     "tile5Image": {
       "type": "media",
@@ -126,8 +126,8 @@
     "tile5CtaLabel": {
       "type": "string"
     },
-    "tile5CtaRef": {
-      "type": "json"
+    "tile5CtaUrl": {
+      "type": "string"
     },
     "tile6Image": {
       "type": "media",
@@ -146,8 +146,8 @@
     "tile6CtaLabel": {
       "type": "string"
     },
-    "tile6CtaRef": {
-      "type": "json"
+    "tile6CtaUrl": {
+      "type": "string"
     }
   }
 }
