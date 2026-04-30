@@ -171,7 +171,9 @@ export interface SectionsHero extends Struct.ComponentSchema {
     background: Schema.Attribute.Media<'images' | 'videos'>;
     ctaLabel: Schema.Attribute.String;
     ctaLink: Schema.Attribute.String;
-    heroType: Schema.Attribute.String;
+    heroType: Schema.Attribute.Enumeration<['classic', 'sticky', 'overlay']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'classic'>;
     text: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
     video: Schema.Attribute.Media<'videos'>;

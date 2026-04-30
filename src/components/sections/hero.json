@@ -6,9 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "heroType": {
-      "type": "string"
-    },
     "background": {
       "type": "media",
       "multiple": false,
@@ -37,6 +34,16 @@
     },
     "ctaLink": {
       "type": "string"
+    },
+    "heroType": {
+      "type": "enumeration",
+      "required": true,
+      "default": "classic",
+      "enum": [
+        "classic",
+        "sticky",
+        "overlay"
+      ]
     }
   }
 }

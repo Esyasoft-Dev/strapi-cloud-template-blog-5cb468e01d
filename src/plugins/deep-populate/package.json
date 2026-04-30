@@ -1,0 +1,12 @@
+{
+    "name": "deep-populate",
+    "version": "1.0.0",
+    "description": "Deep populate with component name injection",
+    "strapi": {
+        "kind": "plugin",
+        "name": "deep-populate",
+        "displayName": "Deep Populate"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

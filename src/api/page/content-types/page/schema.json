@@ -9,6 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
@@ -39,12 +40,12 @@
     },
     "headerBackgroundType": {
       "type": "enumeration",
+      "required": true,
+      "default": "white",
       "enum": [
         "white",
         "transparent"
-      ],
-      "default": "white",
-      "required": true
+      ]
     },
     "seoTitle": {
       "type": "string"
