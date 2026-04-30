@@ -78,7 +78,21 @@ export interface SectionsCards extends Struct.ComponentSchema {
   };
   attributes: {
     cardItems: Schema.Attribute.Relation<'oneToMany', 'api::card.card'>;
-    cardType: Schema.Attribute.String;
+    cardType: Schema.Attribute.Enumeration<
+      [
+        'feature-cards',
+        'large-cta-cards',
+        'small-cta-cards',
+        'full-width-cards',
+        'platform-cards',
+        'team-member-cards',
+        'scrollable-cards',
+        'grouped-timeline',
+        'company-cards',
+        'contact-cards',
+      ]
+    > &
+      Schema.Attribute.Required;
     disableModal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     groupCardItems: Schema.Attribute.Relation<
       'oneToMany',
@@ -174,6 +188,8 @@ export interface SectionsHero extends Struct.ComponentSchema {
     heroType: Schema.Attribute.Enumeration<['classic', 'sticky', 'overlay']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'classic'>;
+    showRequestDemo: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
     video: Schema.Attribute.Media<'videos'>;

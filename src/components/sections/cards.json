@@ -1,14 +1,50 @@
 {
   "collectionName": "components_sections_cards",
-  "info": { "displayName": "Cards", "icon": "layout" },
+  "info": {
+    "displayName": "Cards",
+    "icon": "layout"
+  },
   "options": {},
   "attributes": {
-    "internalName": { "type": "string" },
-    "title": { "type": "string" },
-    "cardType": { "type": "string" },
-    "noOverlay": { "type": "boolean", "default": false },
-    "disableModal": { "type": "boolean", "default": false },
-    "cardItems": { "type": "relation", "relation": "oneToMany", "target": "api::card.card" },
-    "groupCardItems": { "type": "relation", "relation": "oneToMany", "target": "api::group-card.group-card" }
+    "internalName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "noOverlay": {
+      "type": "boolean",
+      "default": false
+    },
+    "disableModal": {
+      "type": "boolean",
+      "default": false
+    },
+    "cardItems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::card.card"
+    },
+    "groupCardItems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::group-card.group-card"
+    },
+    "cardType": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "feature-cards",
+        "large-cta-cards",
+        "small-cta-cards",
+        "full-width-cards",
+        "platform-cards",
+        "team-member-cards",
+        "scrollable-cards",
+        "grouped-timeline",
+        "company-cards",
+        "contact-cards"
+      ]
+    }
   }
 }

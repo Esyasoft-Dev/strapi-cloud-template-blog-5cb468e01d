@@ -44,6 +44,10 @@
         "sticky",
         "overlay"
       ]
+    },
+    "showRequestDemo": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
