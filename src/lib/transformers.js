@@ -74,7 +74,7 @@ function transformCtaLink(raw) {
 
 function transformTag(tag) {
   return {
-    fields: { name: tag?.name, value: tag?.value, type: tag?.cf_type },
+    fields: { name: tag?.name, value: tag?.value, type: tag?.tag_type },
     sys: { id: String(tag?.id || tag?.documentId || '') },
   };
 }
@@ -137,6 +137,19 @@ function transformCards(cards) {
       sys: { id: String(card?.id || i) },
     };
   });
+}
+
+// ---------- Social Handles ----------
+
+function transformSocialHandles(handles) {
+  if (!Array.isArray(handles)) return [];
+  return handles.map((handle) => ({
+    fields: {
+      ctaLink: { fields: { ctaLink: handle?.url || '' } },
+      image: transformMedia(handle?.icon),
+    },
+    sys: { id: String(handle?.id || handle?.documentId || '') },
+  }));
 }
 
 // ---------- Locations ----------
@@ -376,6 +389,7 @@ function transformGlobalConfig(config) {
     departmentOptions: config.departmentOptions || [],
     headerPrefix: config.headerPrefix,
     websiteGroup: transformCards(config.websiteGroup || []),
+    socialHandles: transformSocialHandles(config.social_handles || []),
   };
 }
 
@@ -449,6 +463,7 @@ module.exports = {
   transformTag,
   transformCard,
   transformCards,
+  transformSocialHandles,
   transformBlock,
   transformBlocks,
   transformPage,

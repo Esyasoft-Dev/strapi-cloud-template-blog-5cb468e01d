@@ -8,7 +8,9 @@ const populate = {
 
 module.exports = () => {
   return async (ctx, next) => {
-    ctx.query.populate = populate;
+    if (ctx.query.useDefaultPopulate !== 'false') {
+      ctx.query.populate = populate;
+    }
     await next();
   };
 };

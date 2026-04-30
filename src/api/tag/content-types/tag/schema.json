@@ -9,6 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
@@ -18,8 +19,9 @@
       "type": "string",
       "required": true
     },
-    "cf_type": {
+    "tag_type": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "product-tag",
         "news-category",
@@ -28,8 +30,7 @@
         "news-tag",
         "case-study-tag",
         "blog-tag"
-      ],
-      "required": true
+      ]
     }
   }
 }
