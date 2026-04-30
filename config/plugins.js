@@ -27,15 +27,4 @@ module.exports = ({ env }) => ({
     seo: {
         enabled: true,
     },
-    // "populate-all": {
-    //     enabled: true,
-    //     config: {
-    //         cache: true,
-    //         relations: true,
-    //     },
-    // },
-    // "deep-populate": {
-    //     enabled: true,
-    //     resolve: "./src/plugins/deep-populate",
-    // },
 });
