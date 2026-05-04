@@ -83,11 +83,16 @@ function transformTag(tag) {
 
 function transformCard(card) {
   let ctaLink = null;
-  if (card.ctaLinkData) {
-    ctaLink = transformCtaLink(card.ctaLinkData);
-  } else if (card.ctaLink) {
+  // if (card.ctaLinkData) {
+  //   ctaLink = transformCtaLink(card.ctaLinkData);
+  // } else if (card.ctaLink) {
+  //   ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaLink } };
+  // }
+
+  if (card.ctaLink) {
     ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaLink } };
   }
+
   return {
     fields: {
       title: card.title,
@@ -112,11 +117,16 @@ function transformCards(cards) {
   if (!Array.isArray(cards)) return [];
   return cards.map((card, i) => {
     let ctaLink = null;
-    if (card.ctaLinkData) {
-      ctaLink = transformCtaLink(card.ctaLinkData);
-    } else if (card.ctaLink) {
+    // if (card.ctaLinkData) {
+    //   ctaLink = transformCtaLink(card.ctaLinkData);
+    // } else if (card.ctaLink) {
+    //   ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaLink } };
+    // }
+
+    if (card.ctaLink) {
       ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaLink } };
     }
+
     return {
       fields: {
         title: card?.title,
@@ -260,8 +270,11 @@ function transformBlock(block) {
         fields: { year: gc.year, items: (gc.items || []).map(transformCard) },
         sys: { id: gc.documentId || String(gc.id) },
       }));
+
+      const { cardItems: cardItemsFromBlock, ...rest } = block;
+
       fields = {
-        ...block,
+        ...rest,
         cards: block.cardType === 'grouped-timeline' ? groupCardItems : [...cardItems, ...groupCardItems],
       };
       break;
