@@ -85,8 +85,8 @@ function transformCard(card) {
   let ctaLink = null;
   if (card.ctaLinkData) {
     ctaLink = transformCtaLink(card.ctaLinkData);
-  } else if (card.ctaUrl) {
-    ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaUrl } };
+  } else if (card.ctaLink) {
+    ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaLink } };
   }
   return {
     fields: {
@@ -114,8 +114,8 @@ function transformCards(cards) {
     let ctaLink = null;
     if (card.ctaLinkData) {
       ctaLink = transformCtaLink(card.ctaLinkData);
-    } else if (card.ctaUrl) {
-      ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaUrl } };
+    } else if (card.ctaLink) {
+      ctaLink = { sys: { contentType: { sys: { id: 'url' } } }, fields: { ctaLink: card.ctaLink } };
     }
     return {
       fields: {
@@ -124,7 +124,7 @@ function transformCards(cards) {
         image: card?.image ? transformMedia(card.image) : undefined,
         logo: card?.logo ? transformMedia(card.logo) : undefined,
         ctaLabel: card?.ctaLabel,
-        ctaUrl: card.ctaUrl || null,
+        // ctaUrl: card.ctaUrl || null,
         ctaLink,
         ctaWillOpenModal: card?.ctaWillOpenModal,
         showAddressFields: card?.showAddressFields,
