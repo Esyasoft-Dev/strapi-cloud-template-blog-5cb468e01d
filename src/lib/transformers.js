@@ -449,12 +449,18 @@ function transformProduct(product) {
       video: transformMedia(product?.video),
       images: (product?.images || []).map(transformMedia).filter(Boolean),
       diagram: transformMedia(product?.diagram),
-      technicalSpecification: (product?.technicalSpecificationRef || [])
-        .filter((ref) => !ref.ctfId)
-        .map((ref, i) => ({
-          fields: { title: ref?.title || '', repeater: ref?.repeater || [] },
-          sys: { id: String(ref?.id || i) },
-        })),
+      technicalSpecification: (product?.technicalSpecifications || []).map(
+        (spec, i) => ({
+          fields: {
+            title: spec?.title || '',
+            repeater: (spec?.rows || []).map((row) => ({
+              key: row.key,
+              value: row.value,
+            })),
+          },
+          sys: { id: String(spec?.id || i) },
+        })
+      ),
       dataSheetDocument: transformMedia(product?.dataSheetDocument),
       userManualDocument: transformMedia(product?.userManualDocument),
       seoTitle: product?.seoTitle,

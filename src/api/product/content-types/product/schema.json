@@ -77,8 +77,10 @@
         "images"
       ]
     },
-    "technicalSpecificationRef": {
-      "type": "json"
+    "technicalSpecifications": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tech-spec-group"
     },
     "dataSheetDocument": {
       "type": "media",

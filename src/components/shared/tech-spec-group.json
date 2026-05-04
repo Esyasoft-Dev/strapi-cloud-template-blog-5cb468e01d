@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_tech_spec_groups",
+  "info": {
+    "displayName": "Tech Spec Group",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tech-spec-row"
+    }
+  }
+}

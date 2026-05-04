@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_tech_spec_rows",
+  "info": {
+    "displayName": "Tech Spec Row",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

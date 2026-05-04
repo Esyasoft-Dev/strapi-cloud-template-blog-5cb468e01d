@@ -9,6 +9,9 @@ const populate = {
   dataSheetDocument: true,
   userManualDocument: true,
   productTags: true,
+  technicalSpecifications: {
+    populate: { rows: true },
+  },
 };
 
 module.exports = () => {
