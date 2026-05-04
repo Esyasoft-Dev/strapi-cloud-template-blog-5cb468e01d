@@ -271,7 +271,7 @@ function transformBlock(block) {
         sys: { id: gc.documentId || String(gc.id) },
       }));
 
-      const { cardItems: cardItemsFromBlock, ...rest } = block;
+      const { cardItems: cardItemsFromBlock, groupCardItems: groupCardItemsBlock, ...rest } = block;
 
       fields = {
         ...rest,

@@ -45,7 +45,16 @@ const populate = {
               logo: true,
             },
           },
-          groupCardItems: true,
+          groupCardItems: {
+            populate: {
+              items: {
+                populate: {
+                  image: true,
+                  logo: true,
+                },
+              },
+            },
+          },
         },
       },
       'sections.tabbed-content': {
