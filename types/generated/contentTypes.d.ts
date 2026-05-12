@@ -747,7 +747,6 @@ export interface ApiMenuItemMenuItem extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    linkRef: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -761,7 +760,6 @@ export interface ApiMenuItemMenuItem extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::menu-item.menu-item'
     >;
-    submenuItemsRef: Schema.Attribute.JSON;
     text: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -902,7 +900,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     seoTitle: Schema.Attribute.String;
     shortDescription: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID<'name'>;
-    technicalSpecificationRef: Schema.Attribute.JSON;
+    technicalSpecifications: Schema.Attribute.Component<
+      'shared.tech-spec-group',
+      true
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

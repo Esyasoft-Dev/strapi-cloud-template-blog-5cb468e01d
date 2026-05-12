@@ -260,7 +260,7 @@ function transformBlock(block) {
         ...block,
         background: transformMedia(block.background),
         ctaLink: transformCtaLink(block.ctaLink),
-        locations: transformLocations(block.locationsRef || block.locations || []),
+        locations: transformLocations(block.locations || []),
       };
       break;
 

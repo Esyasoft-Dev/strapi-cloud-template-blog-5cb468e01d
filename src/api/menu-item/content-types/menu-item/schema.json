@@ -9,6 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
@@ -16,12 +17,6 @@
     },
     "text": {
       "type": "text"
-    },
-    "linkRef": {
-      "type": "json"
-    },
-    "submenuItemsRef": {
-      "type": "json"
     },
     "pageLink": {
       "type": "relation",

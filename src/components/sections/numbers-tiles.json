@@ -14,8 +14,8 @@
     },
     "hideTilesSection": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
     "tilesSectionTitle": {
       "type": "string"
@@ -46,6 +46,9 @@
     "tile1CtaLabel": {
       "type": "string"
     },
+    "tile1CtaLink": {
+      "type": "string"
+    },
     "tile2Image": {
       "type": "media",
       "multiple": false,
@@ -61,6 +64,9 @@
       "type": "richtext"
     },
     "tile2CtaLabel": {
+      "type": "string"
+    },
+    "tile2CtaLink": {
       "type": "string"
     },
     "tile3Image": {
@@ -80,6 +86,9 @@
     "tile3CtaLabel": {
       "type": "string"
     },
+    "tile3CtaLink": {
+      "type": "string"
+    },
     "tile4Image": {
       "type": "media",
       "multiple": false,
@@ -95,6 +104,9 @@
       "type": "richtext"
     },
     "tile4CtaLabel": {
+      "type": "string"
+    },
+    "tile4CtaLink": {
       "type": "string"
     },
     "tile5Image": {
@@ -114,6 +126,9 @@
     "tile5CtaLabel": {
       "type": "string"
     },
+    "tile5CtaLink": {
+      "type": "string"
+    },
     "tile6Image": {
       "type": "media",
       "multiple": false,
@@ -129,21 +144,6 @@
       "type": "richtext"
     },
     "tile6CtaLabel": {
-      "type": "string"
-    },
-    "tile1CtaLink": {
-      "type": "string"
-    },
-    "tile2CtaLink": {
-      "type": "string"
-    },
-    "tile3CtaLink": {
-      "type": "string"
-    },
-    "tile4CtaLink": {
-      "type": "string"
-    },
-    "tile5CtaLink": {
       "type": "string"
     },
     "tile6CtaLink": {

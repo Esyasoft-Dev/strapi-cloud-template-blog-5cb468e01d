@@ -387,6 +387,30 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTechSpecGroup extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tech_spec_groups';
+  info: {
+    displayName: 'Tech Spec Group';
+    icon: 'layer';
+  };
+  attributes: {
+    rows: Schema.Attribute.Component<'shared.tech-spec-row', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTechSpecRow extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tech_spec_rows';
+  info: {
+    displayName: 'Tech Spec Row';
+    icon: 'list';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 export interface SharedUrl extends Struct.ComponentSchema {
   collectionName: 'components_shared_urls';
   info: {
@@ -422,6 +446,8 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.tech-spec-group': SharedTechSpecGroup;
+      'shared.tech-spec-row': SharedTechSpecRow;
       'shared.url': SharedUrl;
     }
   }
