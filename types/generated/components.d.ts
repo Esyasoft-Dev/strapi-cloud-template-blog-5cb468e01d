@@ -26,6 +26,18 @@ export interface ElementsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_faq_items';
+  info: {
+    displayName: 'FAQ Item';
+    icon: 'question';
+  };
+  attributes: {
+    answer: Schema.Attribute.RichText & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsGroupCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_group_cards';
   info: {
@@ -140,6 +152,19 @@ export interface SectionsCtaSection extends Struct.ComponentSchema {
     >;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsFaq extends Struct.ComponentSchema {
+  collectionName: 'components_sections_faqs';
+  info: {
+    displayName: 'FAQ';
+    icon: 'question';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    faqs: Schema.Attribute.Component<'elements.faq-item', true>;
+    title: Schema.Attribute.RichText;
   };
 }
 
@@ -426,12 +451,14 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'elements.card': ElementsCard;
+      'elements.faq-item': ElementsFaqItem;
       'elements.group-card': ElementsGroupCard;
       'elements.tab': ElementsTab;
       'sections.animated-logos': SectionsAnimatedLogos;
       'sections.cards': SectionsCards;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cta-section': SectionsCtaSection;
+      'sections.faq': SectionsFaq;
       'sections.form-section': SectionsFormSection;
       'sections.gallery': SectionsGallery;
       'sections.hero': SectionsHero;

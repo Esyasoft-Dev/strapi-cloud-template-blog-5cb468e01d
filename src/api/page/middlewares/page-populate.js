@@ -79,6 +79,11 @@ const populate = {
           tile6Image: true,
         },
       },
+      'sections.faq': {
+        populate: {
+          faqs: true,
+        },
+      },
       'elements.tab': {
         populate: {
           tags: true,

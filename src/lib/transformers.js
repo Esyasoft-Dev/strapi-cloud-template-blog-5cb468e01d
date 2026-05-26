@@ -17,6 +17,7 @@ const COMPONENT_MAP = {
   'sections.form-section': 'formSection',
   'sections.media-tabs': 'mediatabs',
   'sections.tabbed-content': 'tabbedContent',
+  'sections.faq': 'faq',
 };
 
 // ---------- Media ----------
@@ -174,6 +175,18 @@ function transformLocations(locations) {
     }));
 }
 
+// ---------- FAQ ----------
+
+function transformFaqItem(item) {
+  return {
+    fields: {
+      question: item?.question,
+      answer: item?.answer,
+    },
+    sys: { id: String(item?.documentId || item?.id || '') },
+  };
+}
+
 // ---------- Block helpers ----------
 
 function transformPlatformTabs(tabs) {
@@ -292,6 +305,13 @@ function transformBlock(block) {
       fields = {
         ...block,
         contentSections: transformContentSections(block.contentSections || []),
+      };
+      break;
+
+    case 'faq':
+      fields = {
+        ...block,
+        faqs: (block.faqs || []).map(transformFaqItem),
       };
       break;
 
@@ -486,6 +506,7 @@ module.exports = {
   transformCard,
   transformCards,
   transformSocialHandles,
+  transformFaqItem,
   transformBlock,
   transformBlocks,
   transformPage,

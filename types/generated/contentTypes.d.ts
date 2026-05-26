@@ -800,6 +800,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.tabbed-content',
         'sections.media-tabs',
         'sections.numbers-tiles',
+        'sections.faq',
         'elements.tab',
       ]
     >;
