@@ -614,6 +614,13 @@ export interface ApiGlobalConfigGlobalConfig extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    company_address: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'1101, Liberty House, DIFC, Dubai, UAE'>;
+    company_name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Esyasoft'>;
+    company_number: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'+971 4 591 3418'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

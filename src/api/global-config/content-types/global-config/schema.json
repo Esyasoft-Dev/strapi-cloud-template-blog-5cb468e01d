@@ -94,6 +94,19 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::card.card"
+    },
+    "company_name": {
+      "type": "string",
+      "default": "Esyasoft",
+      "required": true
+    },
+    "company_address": {
+      "type": "string",
+      "default": "1101, Liberty House, DIFC, Dubai, UAE"
+    },
+    "company_number": {
+      "type": "string",
+      "default": "+971 4 591 3418"
     }
   }
 }
