@@ -403,6 +403,9 @@ function transformGlobalConfig(config) {
     headerPrefix: config.headerPrefix,
     websiteGroup: transformCards(config.websiteGroup || []),
     socialHandles: transformSocialHandles(config.social_handles || []),
+    company_name: config.company_name || null,
+    company_address: config.company_address || null,
+    company_number: config.company_number || null,
   };
 }
 
